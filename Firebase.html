@@ -11,6 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+      
+      input:valid {
+        border: 2px solid black;
+      }
+
+    </style>
+    
 </head>
 <body onload="inicio()">
 
@@ -20,20 +31,26 @@
     <p id="userAtual">Entre!</p>
     <hr>
 
-    <input class="" id="inNome" type="text" placeholder="Nome"></input>
-    <br>
-    <input id="inEmail" type="email" placeholder="Email"></input>
-    <br>
-    
-    <input id="inPass" type="password" placeholder="Pass"></input>
+    <!-- <input class="" id="inNome" type="text" placeholder="Nome"></input>
+    <br> -->
+    <!-- <input id="inEmail" type="email" placeholder="Email" pattern="[^ @]*@[^ @]*" required></input>
+    <input id="inPass" type="password" placeholder="Pass"></input> -->
+    <form class="pure-form">
+      <fieldset>
+        <input id="inEmail" type="email" placeholder="Email" pattern="[^ @]*@[^ @]*" required></input>
+        <input id="inPass" type="password" placeholder="Pass" required></input>
+          
+      </fieldset>
+  </form>
     <hr>
-    <button class="btn btn-success mb-2" onclick="btnEntrar()" >Entrar</button>
-    <button class="btn btn-danger mb-2" onclick="btnSair()" >Sair</button>
-    <button class="btn btn-primary mb-2" onclick="btnCriar()" >Criar</button>
-    <button class="btn btn-warning mb-2" onclick="btnAtualizar()" >Atualizar</button>
-    <button class="btn btn-danger mb-2" onclick="btnRemover()" >Remover</button>
-    <button class="btn btn-success mb-2" onclick="btnRecuperar()" >Recuperar</button>
-    <button class="btn btn-info mb-2" onclick="usuarioAtual()" >User Atual</button>
+    
+    <button id="Entrar" class="btn btn-success mb-2" onclick="btnEntrar()" >Entrar</button>
+    <button id="Sair" class="btn btn-danger mb-2" onclick="btnSair()" >Sair</button>
+    <button id="Criar" class="btn btn-primary mb-2" onclick="btnCriar()" >Criar</button>
+    <button id="Atualizar" class="btn btn-warning mb-2" onclick="btnAtualizar()" >Atualizar</button>
+    <button id="Remover" class="btn btn-danger mb-2" onclick="btnRemover()" >Remover</button>
+    <button id="Recuperar" class="btn btn-success mb-2" onclick="btnRecuperar()" >Recuperar</button>
+    <button id="Atual" class="btn btn-info mb-2" onclick="usuarioAtual()" >User Atual</button>
     <span id="saidaAuth"></span>
   </div>
 
